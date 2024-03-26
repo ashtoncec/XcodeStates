@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A22EFE432BB32368005C0709 /* StatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22EFE422BB32368005C0709 /* StatesTableViewController.swift */; };
 		A2BD7EBC2BB1E6C9001FF064 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD7EBB2BB1E6C9001FF064 /* AppDelegate.swift */; };
 		A2BD7EBE2BB1E6C9001FF064 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD7EBD2BB1E6C9001FF064 /* SceneDelegate.swift */; };
 		A2BD7EC02BB1E6C9001FF064 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD7EBF2BB1E6C9001FF064 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A22EFE422BB32368005C0709 /* StatesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesTableViewController.swift; sourceTree = "<group>"; };
 		A2BD7EB82BB1E6C9001FF064 /* Ind03_Cecil_Ashton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ind03_Cecil_Ashton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2BD7EBB2BB1E6C9001FF064 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2BD7EBD2BB1E6C9001FF064 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				A2BD7EBD2BB1E6C9001FF064 /* SceneDelegate.swift */,
 				A2BD7EBF2BB1E6C9001FF064 /* ViewController.swift */,
 				A2BD7EC12BB1E6C9001FF064 /* Main.storyboard */,
+				A22EFE422BB32368005C0709 /* StatesTableViewController.swift */,
 				A2BD7EC42BB1E6CA001FF064 /* Assets.xcassets */,
 				A2BD7EC62BB1E6CA001FF064 /* LaunchScreen.storyboard */,
 				A2BD7EC92BB1E6CA001FF064 /* Info.plist */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2BD7EC02BB1E6C9001FF064 /* ViewController.swift in Sources */,
+				A22EFE432BB32368005C0709 /* StatesTableViewController.swift in Sources */,
 				A2BD7EBC2BB1E6C9001FF064 /* AppDelegate.swift in Sources */,
 				A2BD7EBE2BB1E6C9001FF064 /* SceneDelegate.swift in Sources */,
 			);
