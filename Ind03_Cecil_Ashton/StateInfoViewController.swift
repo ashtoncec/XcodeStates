@@ -10,23 +10,21 @@ import UIKit
 class StateInfoViewController: UIViewController {
 
     @IBOutlet weak var StateLabel: UILabel!
+    @IBOutlet weak var StateFlag: UIImageView!
+    @IBOutlet weak var StateMap: UIImageView!
+    @IBOutlet weak var SquareMiles: UILabel!
     
+    var stateInfo: Details?
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if let stateDetails = stateInfo{
+            StateLabel.text = stateDetails.stateName
+            StateFlag.image = UIImage(named: stateDetails.flagImage)
+            StateMap.image = UIImage(named: stateDetails.mapImage)
+            SquareMiles.text = "\(stateDetails.squareMiles) Sq. Miles"
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

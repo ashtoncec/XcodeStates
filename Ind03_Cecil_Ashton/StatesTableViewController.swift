@@ -7,45 +7,87 @@
 
 import UIKit
 
-class StatesTableViewController: UITableViewController {
-    
+struct Details{
+    let stateName: String
+    let stateNickname: String
+    let flagImage: String
+    let mapImage: String
+    let squareMiles: String
+}
 
-    
-    let stateArray = [(state: "Alabama", nickname: "Yellowhammer State"), (state: "Alaska", nickname: "The Last Frontier"), (state: "Arizona", nickname: "The Grand Canyon State"), (state: "Arkansas", nickname: "The Natural State"), (state: "California", nickname: "The Golden State"), (state: "Colorado", nickname: "The Centennial State"), (state: "Connecticut", nickname: "The Constitution State"), (state: "Delaware", nickname: "The First State"), (state: "Florida", nickname: "The Sunshine State"), (state: "Georgia", nickname: "The Peach State"), (state: "Hawaii", nickname: "The Aloha State"), (state: "Idaho", nickname: "The Gem State"), (state: "Illinois", nickname: "The Prairie State"), (state: "Indiana", nickname: "The Hoosier State"), (state: "Iowa", nickname: "The Hawkeye State"),(state: "Kansas", nickname: "The Sunflower State"), (state: "Kentucky", nickname: "The Bluegrass State"), (state: "Louisiana", nickname: "The Pelican State"), (state: "Maine", nickname: "The Pine Tree State"), (state: "Maryland", nickname: "The Old Line State"), (state: "Massachusetts", nickname: "The Bay State"), (state: "Michigan", nickname: "The Great Lakes State"), (state: "Minnesota", nickname: "The North Star State"), (state: "Mississippi", nickname: "The Magnolia State"), (state: "Missouri", nickname: "The Show Me State"), (state: "Montana", nickname: "The Treasure State"), (state: "Nebraska", nickname: "The Cornhusker State"), (state: "Nevada", nickname: "The Silver State"), (state: "New Hampshire", nickname: "The Granite State"), (state: "New Jersey", nickname: "The Garden State"), (state: "New Mexico", nickname: "The Land of Enchantment"), (state: "New York", nickname: "The Empire State"), (state: "North Carolina", nickname: "The Tar Heel State"), (state: "North Dakota", nickname: "The Peace Garden State"), (state: "Ohio", nickname: "The Buckeye State"), (state: "Oklahoma", nickname: "The Sooner State"), (state: "Oregon", nickname: "The Beaver State"), (state: "Pennsylvania", nickname: "The Keystone State"), (state: "Rhode Island", nickname: "The Ocean State"), (state: "South Carolina", nickname: "The Palmetto State"), (state: "South Dakota", nickname: "Mount Rushmore State"), (state: "Tennessee", nickname: "The Volunteer State"), (state: "Texas", nickname: "The Lone Star State"), (state: "Utah", nickname: "The Beehive State"), (state: "Vermont", nickname: "The Green Mountain State"), (state: "Virginia", nickname: "The Old Dominion"), (state: "Washington", nickname: "The Evergreen State"), (state: "West Virginia", nickname: "The Mountain State"), (state: "Wisconsin", nickname: "The Badger State"), (state: "Wyoming", nickname: "The Equality State")]
-    
+class StatesTableViewController: UITableViewController {
+    let stateArray = [Details(stateName: "Alabama", stateNickname: "Yellowhammer State", flagImage: "AlabamaFlag", mapImage: "Alabama", squareMiles: "52,420"), Details(stateName: "Alaska", stateNickname: "The Last Frontier", flagImage: "AlaskaFlag", mapImage: "Alaska", squareMiles: "665,384"),
+        Details(stateName: "Arizona", stateNickname: "The Grand Canyon State", flagImage: "ArizonaFlag", mapImage: "Arizona", squareMiles: "113,990"),
+        Details(stateName: "Arkansas", stateNickname: "The Natural State", flagImage: "ArkansasFlag", mapImage: "Arkansas", squareMiles: "53,179"),
+        Details(stateName: "California", stateNickname: "The Golden State", flagImage: "CaliforniaFlag", mapImage: "California", squareMiles: "163,695"),
+        Details(stateName: "Colorado", stateNickname: "The Centennial State", flagImage: "ColoradoFlag", mapImage: "Colorado", squareMiles: "104,094"),
+        Details(stateName: "Connecticut", stateNickname: "The Constitution State", flagImage: "ConnecticutFlag", mapImage: "Connecticut", squareMiles: "5,553"),
+        Details(stateName: "Delaware", stateNickname: "The First State", flagImage: "DelawareFlag", mapImage: "Delaware", squareMiles: "2,489"),
+        Details(stateName: "Florida", stateNickname: "The Sunshine State", flagImage: "FloridaFlag", mapImage: "Florida", squareMiles: "65,758"),
+        Details(stateName: "Georgia", stateNickname: "The Peach State", flagImage: "GeorgiaFlag", mapImage: "Georgia", squareMiles: "59,425"),
+        Details(stateName: "Hawaii", stateNickname: "The Aloha State", flagImage: "HawaiiFlag", mapImage: "Hawaii", squareMiles: "10,932"),
+        Details(stateName: "Idaho", stateNickname: "The Gem State", flagImage: "IdahoFlag", mapImage: "Idaho", squareMiles: "83,569"),
+        Details(stateName: "Illinois", stateNickname: "The Prairie State", flagImage: "IllinoisFlag", mapImage: "Illinois", squareMiles: "57,914"),
+        Details(stateName: "Indiana", stateNickname: "The Hoosier State", flagImage: "IndianaFlag", mapImage: "Indiana", squareMiles: "36,420"),
+        Details(stateName: "Iowa", stateNickname: "The Hawkeye State", flagImage: "IowaFlag", mapImage: "Iowa", squareMiles: "56,273"),
+        Details(stateName: "Kansas", stateNickname: "The Sunflower State", flagImage: "KansasFlag", mapImage: "Kansas", squareMiles: "82,278"),
+        Details(stateName: "Kentucky", stateNickname: "The Bluegrass State", flagImage: "KentuckyFlag", mapImage: "Kentucky", squareMiles: "40,408"),
+        Details(stateName: "Louisiana", stateNickname: "The Pelican State", flagImage: "LouisianaFlag", mapImage: "Louisiana", squareMiles: "52,378"),
+        Details(stateName: "Maine", stateNickname: "The Pine Tree State", flagImage: "MaineFlag", mapImage: "Maine", squareMiles: "35,380"),
+        Details(stateName: "Maryland", stateNickname: "The Old Line State", flagImage: "MarylandFlag", mapImage: "Maryland", squareMiles: "12,406"),
+        Details(stateName: "Massachusetts", stateNickname: "The Bay State", flagImage: "MassachusettsFlag", mapImage: "Massachusetts", squareMiles: "10,554"),
+        Details(stateName: "Michigan", stateNickname: "The Great Lakes State", flagImage: "MichiganFlag", mapImage: "Michigan", squareMiles: "96,714"),
+        Details(stateName: "Minnesota", stateNickname: "The North Star State", flagImage: "MinnesotaFlag", mapImage: "Minnesota", squareMiles: "86,936"),
+        Details(stateName: "Mississippi", stateNickname: "The Magnolia State", flagImage: "MississippiFlag", mapImage: "Mississippi", squareMiles: "48,432"),
+        Details(stateName: "Missouri", stateNickname: "The Show Me State", flagImage: "MissouriFlag", mapImage: "Missouri", squareMiles: "69,707"),
+        Details(stateName: "Montana", stateNickname: "The Treasure State", flagImage: "MontanaFlag", mapImage: "Montana", squareMiles: "147,040"),
+        Details(stateName: "Nebraska", stateNickname: "The Cornhusker State", flagImage: "NebraskaFlag", mapImage: "Nebraska", squareMiles: "77,348"),
+        Details(stateName: "Nevada", stateNickname: "The Silver State", flagImage: "NevadaFlag", mapImage: "Nevada", squareMiles: "110,572"),
+        Details(stateName: "New Hampshire", stateNickname: "The Granite State", flagImage: "New HampshireFlag", mapImage: "New Hampshire", squareMiles: "9,349"),
+        Details(stateName: "New Jersey", stateNickname: "The Garden State", flagImage: "New JerseyFlag", mapImage: "New Jersey", squareMiles: "8,723"),
+        Details(stateName: "New Mexico", stateNickname: "The Land of Enchantment", flagImage: "New MexicoFlag", mapImage: "New Mexico", squareMiles: "121,590"),
+        Details(stateName: "New York", stateNickname: "The Empire State", flagImage: "New YorkFlag", mapImage: "New York", squareMiles: "54,555"),
+        Details(stateName: "North Carolina", stateNickname: "The Tar Heel State", flagImage: "North CarolinaFlag", mapImage: "North Carolina", squareMiles: "53,819"),
+        Details(stateName: "North Dakota", stateNickname: "The Peace Garden State", flagImage: "North DakotaFlag", mapImage: "North Dakota", squareMiles: "70,698"),
+        Details(stateName: "Ohio", stateNickname: "The Buckeye State", flagImage: "OhioFlag", mapImage: "Ohio", squareMiles: "44,826"),
+        Details(stateName: "Oklahoma", stateNickname: "The Sooner State", flagImage: "OklahomaFlag", mapImage: "Oklahoma", squareMiles: "69,899"),
+        Details(stateName: "Oregon", stateNickname: "The Beaver State", flagImage: "OregonFlag", mapImage: "Oregon", squareMiles: "98,379"),
+        Details(stateName: "Pennsylvania", stateNickname: "The Keystone State", flagImage: "PennsylvaniaFlag", mapImage: "Pennsylvania", squareMiles: "46,054"),
+        Details(stateName: "Rhode Island", stateNickname: "The Ocean State", flagImage: "Rhode IslandFlag", mapImage: "Rhode Island", squareMiles: "1,545"),
+        Details(stateName: "South Carolina", stateNickname: "The Palmetto State", flagImage: "South CarolinaFlag", mapImage: "South Carolina", squareMiles: "32,020"),
+        Details(stateName: "South Dakota", stateNickname: "Mount Rushmore State", flagImage: "South DakotaFlag", mapImage: "South Dakota", squareMiles: "77,116"),
+        Details(stateName: "Tennessee", stateNickname: "The Volunteer State", flagImage: "TennesseeFlag", mapImage: "Tennessee", squareMiles: "42,144"),
+        Details(stateName: "Texas", stateNickname: "The Lone Star State", flagImage: "TexasFlag", mapImage: "Texas", squareMiles: "268,596"),
+        Details(stateName: "Utah", stateNickname: "The Beehive State", flagImage: "UtahFlag", mapImage: "Utah", squareMiles: "84,897"),
+        Details(stateName: "Vermont", stateNickname: "The Green Mountain State", flagImage: "VermontFlag", mapImage: "Vermont", squareMiles: "9,616"),
+        Details(stateName: "Virginia", stateNickname: "The Old Dominion", flagImage: "VirginiaFlag", mapImage: "Virginia", squareMiles: "42,775"),
+        Details(stateName: "Washington", stateNickname: "The Evergreen State", flagImage: "WashingtonFlag", mapImage: "Washington", squareMiles: "71,298"),
+        Details(stateName: "West Virginia", stateNickname: "The Mountain State", flagImage: "West VirginiaFlag", mapImage: "West Virginia", squareMiles: "24,230"),
+        Details(stateName: "Wisconsin", stateNickname: "The Badger State", flagImage: "WisconsinFlag", mapImage: "Wisconsin", squareMiles: "65,496"),
+        Details(stateName: "Wyoming", stateNickname: "The Equality State", flagImage: "WyomingFlag", mapImage: "Wyoming", squareMiles: "97,813")
+    ]
     
     let stateHeader = ["50 U.S. States"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return stateArray.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "State Cell", for: indexPath)
 
-        
-        let stateName = stateArray[indexPath.row].state
-        let stateNickname = stateArray[indexPath.row].nickname
-        // Configure the cell...
+        let stateName = stateArray[indexPath.row].stateName
+        let stateNickname = stateArray[indexPath.row].stateNickname
         cell.textLabel?.text = stateName
         cell.detailTextLabel?.text = stateNickname
 
@@ -56,51 +98,12 @@ class StatesTableViewController: UITableViewController {
         return stateHeader[0]
     }
     
-   
-    
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "StateSegue",
+           let destinationVC = segue.destination as? StateInfoViewController,
+           let indexPath = tableView.indexPathForSelectedRow {
+            let selectedStateDetails = stateArray[indexPath.row]
+            destinationVC.stateInfo = selectedStateDetails
+        }
     }
-    */
-
 }
