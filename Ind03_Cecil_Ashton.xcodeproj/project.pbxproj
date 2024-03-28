@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A22EFE432BB32368005C0709 /* StatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22EFE422BB32368005C0709 /* StatesTableViewController.swift */; };
 		A22EFE452BB347FF005C0709 /* StateInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22EFE442BB347FF005C0709 /* StateInfoViewController.swift */; };
+		A289856B2BB4F09D00DD3084 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A289856A2BB4F09D00DD3084 /* .gitignore */; };
 		A2BD7EBC2BB1E6C9001FF064 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD7EBB2BB1E6C9001FF064 /* AppDelegate.swift */; };
 		A2BD7EBE2BB1E6C9001FF064 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD7EBD2BB1E6C9001FF064 /* SceneDelegate.swift */; };
 		A2BD7EC02BB1E6C9001FF064 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD7EBF2BB1E6C9001FF064 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		A22EFE422BB32368005C0709 /* StatesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesTableViewController.swift; sourceTree = "<group>"; };
 		A22EFE442BB347FF005C0709 /* StateInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateInfoViewController.swift; sourceTree = "<group>"; };
+		A289856A2BB4F09D00DD3084 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A2BD7EB82BB1E6C9001FF064 /* Ind03_Cecil_Ashton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ind03_Cecil_Ashton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2BD7EBB2BB1E6C9001FF064 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2BD7EBD2BB1E6C9001FF064 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +46,7 @@
 		A2BD7EAF2BB1E6C9001FF064 = {
 			isa = PBXGroup;
 			children = (
+				A289856A2BB4F09D00DD3084 /* .gitignore */,
 				A2BD7EBA2BB1E6C9001FF064 /* Ind03_Cecil_Ashton */,
 				A2BD7EB92BB1E6C9001FF064 /* Products */,
 			);
@@ -131,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A289856B2BB4F09D00DD3084 /* .gitignore in Resources */,
 				A2BD7EC52BB1E6CA001FF064 /* Assets.xcassets in Resources */,
 				A2BD7EC82BB1E6CA001FF064 /* Base in Resources */,
 				A2BD7EC32BB1E6C9001FF064 /* Base in Resources */,
